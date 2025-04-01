@@ -24,4 +24,13 @@ O sistema possui um mecanismo de login/logout utilizando sessões.
 
 - **Apenas o bibliotecário** pode cadastrar livros.
 - Os livros são salvos no arquivo `livros.txt` no formato:
-  
+  Título|Autor|Editora|ISBN
+
+- Tentativas de cadastro sem estar logado ou logado como professor são redirecionadas para o painel apropriado.
+
+#### 2.2 Cadastro de Pedidos
+
+- **Apenas professores** podem cadastrar recomendações de compra de livros.
+- As recomendações são salvas no arquivo `pedidos.txt` no formato:
+
+
