@@ -1,18 +1,18 @@
 <?php
 session_start();
 
-// Processamento do login
+// processamento do login
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
     
-    // Verificação de login para professor
+    // verificação de login para professor
     if ($usuario === 'professor' && $senha === 'professor') {
         $_SESSION['tipo'] = 'professor';
         header("Location: painel.php");
         exit();
     }
-    // Verificação de login para bibliotecário
+    // verificação de login para bibliotecário
     elseif ($usuario === 'biblio' && $senha === 'biblio') {
         $_SESSION['tipo'] = 'biblio';
         header("Location: painel.php");
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         echo "Usuário ou senha incorretos!";
     }
 }
-// Logout
+// logout
 if (isset($_GET['logout'])) {
     session_destroy();
     header("Location: login.php");
