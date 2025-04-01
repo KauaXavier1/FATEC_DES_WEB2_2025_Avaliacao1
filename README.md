@@ -32,5 +32,36 @@ O sistema possui um mecanismo de login/logout utilizando sessões.
 
 - **Apenas professores** podem cadastrar recomendações de compra de livros.
 - As recomendações são salvas no arquivo `pedidos.txt` no formato:
+Título|Autor|Editora|ISBN
+
+
+### 3. Visualização de Livros e Pedidos
+
+- **Todos os usuários** podem visualizar os livros cadastrados no sistema.
+- **Apenas o bibliotecário** pode visualizar os pedidos cadastrados pelos professores.
+
+### 4. Funcionalidade de Logout
+
+- A qualquer momento, os usuários podem sair da sua sessão clicando no botão de logout, o que os redireciona de volta para a tela de login.
+
+## Tecnologias Utilizadas
+
+- **PHP**: Linguagem de programação utilizada para o desenvolvimento do sistema.
+- **XAMPP**: Ambiente de desenvolvimento que inclui Apache e PHP.
+- **Arquivos de Texto**: Utilizados para armazenar os dados de livros (`livros.txt`) e pedidos (`pedidos.txt`).
+
+## Como Rodar o Projeto
+
+1. **Instalar o XAMPP**: Baixe e instale o [XAMPP](https://www.apachefriends.org/pt_br/index.html).
+2. **Colocar os Arquivos no Diretório do XAMPP**: Coloque a pasta do projeto na pasta `htdocs` do XAMPP.
+3. **Iniciar o Apache**: Abra o painel de controle do XAMPP e inicie o servidor Apache.
+4. **Acessar o Sistema**: Abra o navegador e vá para `http://localhost/projeto/login.php`.
+5. **Credenciais de Login**:
+ - **Professor**: Login: `professor`, Senha: `professor`
+ - **Bibliotecário**: Login: `biblio`, Senha: `biblio`
+
+
+
+
 
 
