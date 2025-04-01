@@ -46,3 +46,36 @@ if (isset($_GET['logout'])) {
     </form>
     <br>
     <?php endif; ?>
+    <!-- cadastrar pedido (apenas professor) -->
+    <?php if ($_SESSION['tipo'] === 'professor'): ?>
+    <h3>Cadastrar Pedido</h3>
+    <form method="POST" action="cadastrar.php">
+        <label for="titulo">Título do Livro: </label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor" required><br><br>
+
+        <label for="editora">Editora: </label>
+        <input type="text" id="editora" name="editora" required><br><br>
+
+        <label for="isbn">ISBN: </label>
+        <input type="text" id="isbn" name="isbn" required><br><br>
+
+        <button type="submit" name="cadastrar_pedido">Cadastrar Pedido</button>
+    </form>
+    <br>
+    <?php endif; ?>
+
+    <!-- visualizar Livros -->
+    <h3>Visualizar Livros Cadastrados</h3>
+    <a href="visualizar_livros.php">Clique aqui para ver os livros cadastrados</a><br><br>
+
+    <!-- visualizar Pedidos -->
+    <?php if ($_SESSION['tipo'] === 'biblio'): ?>
+    <h3>Visualizar Pedidos</h3>
+    <a href="visualizar_pedidos.php">Clique aqui para ver os pedidos cadastrados</a><br><br>
+    <?php endif; ?>
+
+</body>
+</html>
