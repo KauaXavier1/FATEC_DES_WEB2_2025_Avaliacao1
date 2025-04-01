@@ -17,7 +17,7 @@ if ($_SERVER['RESQUEST_METHOD']) === 'POST' && isset($_POST['cadastrar_livro']))
     echo "Livro cadastrado com sucesso!";
 }
 
-// Cadastrar pedido
+// cadastrar pedido
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar_pedido'])) {
     verificarLogin('professor');
     
